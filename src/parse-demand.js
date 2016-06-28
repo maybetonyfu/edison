@@ -25,7 +25,7 @@ const states = {
     }
 }
 
-fs.readFile("test.csv", "utf8", function (err, data) {
+fs.readFile("../data/demand/test/test.csv", "utf8", function (err, data) {
 
     if (err) {
         return console.log(err)
