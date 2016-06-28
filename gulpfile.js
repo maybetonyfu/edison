@@ -1,19 +1,19 @@
-'use strict';
+"use strict";
 
-var gulp = require('gulp');
-var babel = require('gulp-babel');
-var eslint = require('gulp-eslint')
+var gulp = require("gulp");
+var babel = require("gulp-babel");
+var eslint = require("gulp-eslint")
 
-// var GULP_FILE = ['gulpfile.js'];
-var SRC_FILES = ['src/**/*.js'];
-var COMPILED_SRC_DIR = 'dist';
+// var GULP_FILE = ["gulpfile.js"];
+var SRC_FILES = ["src/**/*.js"];
+var COMPILED_SRC_DIR = "dist";
 
-gulp.task('lint', function () {
+gulp.task("lint", function () {
     // ESLint ignores files with "node_modules" paths.
-    // So, it's best to have gulp ignore the directory as well.
+    // So, it"s best to have gulp ignore the directory as well.
     // Also, Be sure to return the stream from the task;
     // Otherwise, the task may end before the stream has finished.
-    return gulp.src(['src/**/*.js','!node_modules/**'])
+    return gulp.src(["src/**/*.js","!node_modules/**"])
         // eslint() attaches the lint output to the "eslint" property
         // of the file object so it can be used by other modules.
         .pipe(eslint())
@@ -25,11 +25,11 @@ gulp.task('lint', function () {
         .pipe(eslint.failAfterError());
 });
 
-gulp.task('compile', function (done) {
+gulp.task("compile", function (done) {
   gulp.src(SRC_FILES)
     .pipe(babel())
     .pipe(gulp.dest(COMPILED_SRC_DIR))
-    .on('finish', done);
+    .on("finish", done);
 });
 
-gulp.task('default', ['lint', 'compile']);
+gulp.task("default", ["lint", "compile"]);

@@ -1,5 +1,5 @@
-import http from 'http'
-import fs from 'fs'
+import http from "http"
+import fs from "fs"
 
 let file = fs.createWriteStream("demand_data/DATA201112_NSW1_NEW.csv");
 
