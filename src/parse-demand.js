@@ -25,7 +25,7 @@ const states = {
     }
 }
 
-fs.readFile("../data/demand/test/test.csv", "utf8", function (err, data) {
+fs.readFile("../data/demand/test/test.csv", "utf8", (err, data) => {
 
     if (err) {
         return console.log(err)
@@ -47,7 +47,7 @@ function transform_demand_data(err, data) {
         console.log(err)
     }
 
-    let transformed_data = data.map(function (datum) {
+    let transformed_data = data.map((datum) => {
         return {
             region: states[datum.REGION].common_name,
             settlement_date: moment.utc(datum.SETTLEMENTDATE, "YYYY/MM/DD HH:mm:ss", true).toISOString(),
