@@ -57,4 +57,5 @@ function transform_demand_data(err, data) {
     })
 
     console.log(transformed_data)
+
 }
