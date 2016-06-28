@@ -9,7 +9,7 @@ var SRC_FILES = ["src/**/*.js"];
 var COMPILED_SRC_DIR = "dist";
 
 gulp.task("init", function (done) {
-    gulp.src("./**/**")
+    gulp.src("")
         .pipe(exec("mkdir -p data/demand/NSW"))
         .pipe(exec("mkdir -p data/demand/QLD"))
         .pipe(exec("mkdir -p data/demand/SA"))
