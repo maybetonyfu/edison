@@ -1,8 +1,8 @@
-var fs = require('fs')
-var csv = require('csv')
-var moment = require('moment')
+import fs from 'fs'
+import csv from 'csv'
+import moment from 'moment'
 
-var states = {
+const states = {
     'NSW1': {
         common_name: 'NSW',
         nem_name: 'NSW1'
@@ -31,9 +31,9 @@ fs.readFile('test.csv', 'utf8', function (err, data) {
         return console.log(err)
     }
 
-    var demand_data = data
+    let demand_data = data
 
-    var options = {
+    let options = {
         columns: true
     }
 
@@ -47,7 +47,7 @@ function transform_demand_data(err, data) {
         console.log(err)
     }
 
-    var transformed_data = data.map(function (datum) {
+    let transformed_data = data.map(function (datum) {
         return {
             region: states[datum.REGION].common_name,
             settlement_date: moment.utc(datum.SETTLEMENTDATE, 'YYYY/MM/DD HH:mm:ss', true).toISOString(),

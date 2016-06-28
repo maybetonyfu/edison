@@ -38,3 +38,9 @@ jspm_packages
 
 # Data Directory
 *data
+
+# Distribution
+dist
+
+# Builds
+build*

@@ -2,7 +2,7 @@
   "name": "edison",
   "version": "0.1.0",
   "description": "Data visualization of australian electricity demands and dispatch",
-  "repository":"https://github.com/tonysickpony/edison.git",
+  "repository": "https://github.com/tonysickpony/edison.git",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +12,11 @@
   "dependencies": {
     "csv": "^1.1.0",
     "moment": "^2.13.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-preset-es2015": "^6.9.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2"
   }
 }
