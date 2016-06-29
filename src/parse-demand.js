@@ -28,7 +28,9 @@ const states = {
 fs.readFile("../data/demand/test/test.csv", "utf8", (err, data) => {
 
     if (err) {
+
         return console.log(err)
+
     }
 
     let demand_data = data
@@ -41,19 +43,23 @@ fs.readFile("../data/demand/test/test.csv", "utf8", (err, data) => {
 
 })
 
-function transform_demand_data(err, data) {
+function transform_demand_data (err, data) {
 
     if (err) {
+
         console.log(err)
+
     }
 
     let transformed_data = data.map((datum) => {
+
         return {
             region: states[datum.REGION].common_name,
             settlement_date: moment.utc(datum.SETTLEMENTDATE, "YYYY/MM/DD HH:mm:ss", true).toISOString(),
             total_demand: datum.TOTALDEMAND,
             price: datum.RRP
         }
+
     })
 
     console.log(transformed_data)

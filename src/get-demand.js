@@ -1,8 +1,6 @@
 import http from "http"
 import fs from "fs"
 
-
-
 let nem = "http://www.nemweb.com.au"
 
 let demand_path = "/mms.GRAPHS/data/"
