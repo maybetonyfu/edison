@@ -4,7 +4,7 @@ let promisify = require("promisify-node")
 let firebase = require("firebase")
 
 firebase.initializeApp({
-    serviceAccount: "../chameleon-9db84634c14d.json",
+    serviceAccount: "../firebase-account.json",
     databaseURL: "https://chameleon-9a6e4.firebaseio.com"
 })
 
