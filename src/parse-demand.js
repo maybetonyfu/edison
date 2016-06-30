@@ -1,6 +1,16 @@
-import fs from "fs"
-import csv from "csv"
-import moment from "moment"
+let csv = require("csv")
+let moment = require("moment")
+let promisify = require("promisify-node")
+let firebase = require("firebase")
+
+firebase.initializeApp({
+    serviceAccount: "../chameleon-9db84634c14d.json",
+    databaseURL: "https://chameleon-9a6e4.firebaseio.com"
+})
+
+let db = firebase.database()
+
+let fs = promisify("fs")
 
 const states = {
     "NSW1": {
@@ -25,29 +35,24 @@ const states = {
     }
 }
 
-fs.readFile("../data/demand/test/test.csv", "utf8", (err, data) => {
+fs.readFile("../data/demand/NSW/2011-12.csv")
+    .then((data) => {
 
-    if (err) {
+        let demand_data = data
 
-        return console.log(err)
+        let options = {
+            columns: true
+        }
 
-    }
+        csv.parse(demand_data, options, transform_demand_data)
 
-    let demand_data = data
+    })
 
-    let options = {
-        columns: true
-    }
+function transform_demand_data (error, data) {
 
-    csv.parse(demand_data, options, transform_demand_data)
+    if (error) {
 
-})
-
-function transform_demand_data (err, data) {
-
-    if (err) {
-
-        console.log(err)
+        console.log(error)
 
     }
 
@@ -65,3 +70,13 @@ function transform_demand_data (err, data) {
     console.log(transformed_data)
 
 }
+
+let ref = db.ref("/test")
+
+ref.once("value")
+    .then((value) => {
+
+        console.log(value.val())
+        process.exit()
+
+    })

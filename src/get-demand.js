@@ -1,5 +1,5 @@
-import http from "http"
-import fs from "fs"
+let http = require("http")
+let fs = require("fs")
 
 let nem = "http://www.nemweb.com.au"
 
