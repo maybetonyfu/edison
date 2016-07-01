@@ -5,7 +5,7 @@
   "repository": "https://github.com/tonysickpony/edison.git",
   "main": "index.js",
   "scripts": {
-    "test": "eslint src/* && echo 'OK'"
+    "test": "eslint *.js && echo 'OK'"
   },
   "author": "",
   "license": "MIT",
@@ -13,8 +13,8 @@
     "csv": "^1.1.0",
     "firebase": "^3.1.0",
     "moment": "^2.13.0",
-    "promisify": "0.0.3",
-    "promisify-node": "^0.4.0"
+    "moment-timezone": "^0.5.4",
+    "node-fetch": "^1.5.3"
   },
   "devDependencies": {}
 }
