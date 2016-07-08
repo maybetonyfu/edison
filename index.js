@@ -13,7 +13,7 @@ let month = "01"
 
 let year = "2016"
 
-let state = "NSW"
+let states = ["NSW", "QLD", "SA", "TAS", "VIC"]
 
 firebase.initializeApp({
     serviceAccount: "firebase-account.json",
@@ -21,58 +21,61 @@ firebase.initializeApp({
 })
 
 // Main procedure
+states.forEach((state) => {
 
-fetch(`${nem}${demand_path}DATA${year}${month}_${state}1.csv`)
-    .then((res) => {
+    fetch(`${nem}${demand_path}DATA${year}${month}_${state}1.csv`)
+        .then((res) => {
 
-        return res.text()
+            return res.text()
 
-    })
-    .then((body) => {
+        })
+        .then((body) => {
 
-        let options = {
-            columns: true
+            let options = {
+                columns: true
+            }
+
+            csv.parse(body, options, transform_demand_data)
+
+        })
+
+    function transform_demand_data (error, data) {
+
+        if (error) {
+
+            console.log(error)
+
         }
 
-        csv.parse(body, options, transform_demand_data)
+        let db = firebase.database()
 
-    })
+        data.forEach((datum, index, payload) => {
 
-function transform_demand_data (error, data) {
+            let localTimeUnix = moment.tz(datum.SETTLEMENTDATE, "YYYY/MM/DD HH:mm:ss", "Australia/Sydney").unix()
 
-    if (error) {
+            let demand_ref = db.ref(`/${state}/demand/${localTimeUnix}`)
 
-        console.log(error)
+            let price_ref = db.ref(`/${state}/price/${localTimeUnix}`)
+
+            let bookkeeper_ref = db.ref("/bookkeeper")
+
+            demand_ref.set(datum.TOTALDEMAND)
+
+            price_ref.set(datum.RRP)
+
+            if (index === payload.length - 1) {
+
+                bookkeeper_ref.set({
+                    demand_latest: `${year}-${month}`,
+                    price_latest: `${year}-${month}`
+                })
+
+            }
+
+        })
 
     }
 
-    let db = firebase.database()
+})
 
-    data.forEach((datum, index, payload) => {
 
-        let localTimeUnix = moment.tz(datum.SETTLEMENTDATE, "YYYY/MM/DD HH:mm:ss", "Australia/Sydney").unix()
-
-        let localTimeISO = moment.tz(datum.SETTLEMENTDATE, "YYYY/MM/DD HH:mm:ss", "Australia/Sydney").toISOString()
-
-        let demand_ref = db.ref(`/${state}/demand/${localTimeUnix}`)
-
-        let price_ref = db.ref(`/${state}/price/${localTimeUnix}`)
-
-        let bookkeeper_ref = db.ref("/bookkeeper")
-
-        demand_ref.set(datum.TOTALDEMAND)
-
-        price_ref.set(datum.RRP)
-
-        if (index === payload.length - 1) {
-
-            bookkeeper_ref.set({
-                demand_latest: localTimeISO,
-                price_latest: localTimeISO
-            })
-
-        }
-
-    })
-
-}
