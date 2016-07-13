@@ -9,7 +9,7 @@ let nem = "http://www.nemweb.com.au"
 
 let demand_path = "/mms.GRAPHS/data/"
 
-let month = "01"
+let month = "03"
 
 let year = "2016"
 
@@ -63,12 +63,16 @@ states.forEach((state) => {
 
             price_ref.set(datum.RRP)
 
+            console.log(localTimeUnix)
+
             if (index === payload.length - 1) {
 
                 bookkeeper_ref.set({
                     demand_latest: `${year}-${month}`,
                     price_latest: `${year}-${month}`
                 })
+
+                console.log("Updated bookkeeper")
 
             }
 
