@@ -17,7 +17,8 @@ let states = ["NSW", "QLD", "SA", "TAS", "VIC"]
 
 firebase.initializeApp({
     serviceAccount: "firebase-account.json",
-    databaseURL: "https://chameleon-9a6e4.firebaseio.com"
+    databaseURL: "https://chameleon-9a6e4.firebaseio.com",
+    storageBucket: "gs://chameleon-9a6e4.appspot.com/"
 })
 
 // Main procedure
@@ -59,9 +60,9 @@ states.forEach((state) => {
 
             let bookkeeper_ref = db.ref("/bookkeeper")
 
-            demand_ref.set(datum.TOTALDEMAND)
+            demand_ref.set(+datum.TOTALDEMAND)
 
-            price_ref.set(datum.RRP)
+            price_ref.set(+datum.RRP)
 
             console.log(localTimeUnix)
 

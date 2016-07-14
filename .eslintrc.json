@@ -21,7 +21,7 @@
     "comma-dangle": [2, "never"],
     "comma-spacing": [2, { "before": false, "after": true }],
     "comma-style": [2, "last"],
-    "complexity":[2, 10],
+    "complexity":[2, 20],
     "constructor-super": 2,
     "curly": [2, "all"],
     "dot-location": [2, "property"],

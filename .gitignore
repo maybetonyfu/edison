@@ -27,6 +27,7 @@ jspm_packages
 
 # Data Directory
 *data
+*raw
 
 # Secrets
 firebase-account*
