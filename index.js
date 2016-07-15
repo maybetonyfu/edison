@@ -9,7 +9,7 @@ let nem = "http://www.nemweb.com.au"
 
 let demand_path = "/mms.GRAPHS/data/"
 
-let month = "03"
+let month = "06"
 
 let year = "2016"
 
@@ -20,6 +20,8 @@ firebase.initializeApp({
     databaseURL: "https://chameleon-9a6e4.firebaseio.com",
     storageBucket: "gs://chameleon-9a6e4.appspot.com/"
 })
+
+let db = firebase.database()
 
 // Main procedure
 states.forEach((state) => {
@@ -48,34 +50,29 @@ states.forEach((state) => {
 
         }
 
-        let db = firebase.database()
+        data.forEach((datum) => {
 
-        data.forEach((datum, index, payload) => {
+            let isoTime = moment.tz(datum.SETTLEMENTDATE, "YYYY/MM/DD HH:mm:ss", "Australia/Sydney").toISOString()
 
-            let localTimeUnix = moment.tz(datum.SETTLEMENTDATE, "YYYY/MM/DD HH:mm:ss", "Australia/Sydney").unix()
+            let demand_key = db.ref(`/${state}/demand/`).push().key
 
-            let demand_ref = db.ref(`/${state}/demand/${localTimeUnix}`)
+            let price_key = db.ref(`/${state}/price/`).push().key
 
-            let price_ref = db.ref(`/${state}/price/${localTimeUnix}`)
+            let demand_ref = db.ref(`/${state}/demand/${demand_key}`)
 
-            let bookkeeper_ref = db.ref("/bookkeeper")
+            let price_ref = db.ref(`/${state}/price/${price_key}`)
 
-            demand_ref.set(+datum.TOTALDEMAND)
+            demand_ref.set({
+                x: isoTime,
+                y: (+datum.TOTALDEMAND)
+            })
 
-            price_ref.set(+datum.RRP)
+            price_ref.set({
+                x: isoTime,
+                y: (+datum.RRP)
+            })
 
-            console.log(localTimeUnix)
-
-            if (index === payload.length - 1) {
-
-                bookkeeper_ref.set({
-                    demand_latest: `${year}-${month}`,
-                    price_latest: `${year}-${month}`
-                })
-
-                console.log("Updated bookkeeper")
-
-            }
+            console.log(isoTime + " " + state)
 
         })
 
