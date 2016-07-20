@@ -1,9 +1,21 @@
 let csv = require("csv")
 var fetch = require("node-fetch")
-let firebase = require("firebase")
 let moment = require("moment-timezone")
+var influx = require("influx")
 
 // Configurable stuff
+
+var client = influx({
+
+  // cluster configuration
+
+    host: "localhost",
+    port: 8086,
+    protocol: "http",
+    username: "dbwriter",
+    password: "dbwriter",
+    database: "volta"
+})
 
 let nem = "http://www.nemweb.com.au"
 
@@ -15,13 +27,9 @@ let year = "2016"
 
 let states = ["NSW", "QLD", "SA", "TAS", "VIC"]
 
-firebase.initializeApp({
-    serviceAccount: "firebase-account.json",
-    databaseURL: "https://chameleon-9a6e4.firebaseio.com",
-    storageBucket: "gs://chameleon-9a6e4.appspot.com/"
-})
+let price_points = []
 
-let db = firebase.database()
+let demand_points = []
 
 // Main procedure
 states.forEach((state) => {
@@ -52,32 +60,48 @@ states.forEach((state) => {
 
         data.forEach((datum) => {
 
-            let isoTime = moment.tz(datum.SETTLEMENTDATE, "YYYY/MM/DD HH:mm:ss", "Australia/Sydney").toISOString()
+            let unixTime = moment.tz(datum.SETTLEMENTDATE, "YYYY/MM/DD HH:mm:ss", "Australia/Sydney").valueOf()
 
-            let demand_key = db.ref(`/${state}/demand/`).push().key
+            price_points.push([
+                {
+                    value: (+datum.RRP),
+                    time: unixTime
+                },
+                {
+                    region: state
+                }
+            ])
 
-            let price_key = db.ref(`/${state}/price/`).push().key
-
-            let demand_ref = db.ref(`/${state}/demand/${demand_key}`)
-
-            let price_ref = db.ref(`/${state}/price/${price_key}`)
-
-            demand_ref.set({
-                x: isoTime,
-                y: (+datum.TOTALDEMAND)
-            })
-
-            price_ref.set({
-                x: isoTime,
-                y: (+datum.RRP)
-            })
-
-            console.log(isoTime + " " + state)
+            demand_points.push([
+                {
+                    value: (+datum.TOTALDEMAND),
+                    time: unixTime
+                },
+                {
+                    region: state
+                }
+            ])
 
         })
+
+        var series = {
+            price_points: price_points,
+            demand: demand_points
+        }
+
+        client.writeSeries(series, {db: "volta"}, function (err, response) {
+
+            if (err) {
+
+                console.log(err)
+
+            }
+
+            console.log(response)
+
+        })
+
 
     }
 
 })
-
-

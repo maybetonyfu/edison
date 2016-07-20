@@ -1,9 +1,28 @@
 var csv = require("csv")
-var firebase = require("firebase")
-var fs = require("fs")
 var walker = require("walk")
 var generators = require("./generators.json")
 var moment = require("moment-timezone")
+var promisify = require("promisify-node")
+var fs = promisify("fs")
+var influx = require("influx")
+
+// Configurable stuff
+
+var client = influx({
+
+  // cluster configuration
+
+    host: "localhost",
+    port: 8086,
+    protocol: "http",
+    username: "dbwriter",
+    password: "dbwriter",
+    database: "volta"
+})
+
+
+
+// var write_data = new EventEmitter()
 
 var generator_map = new Map()
 
@@ -13,158 +32,182 @@ generators.forEach(function (item) {
 
 })
 
-firebase.initializeApp({
-    serviceAccount: "firebase-account.json",
-    databaseURL: "https://chameleon-9a6e4.firebaseio.com",
-    storageBucket: "gs://chameleon-9a6e4.appspot.com/"
-})
+var month = "06"
 
-var db = firebase.database()
+var year = "2016"
 
-var days = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
-// var days = ["01"]
+// var lastDayOfMonth = new Date(year, month, 0).getDate()
 
-days.forEach((day) => {
-
-    var walk_stream = walker.walk("data/201606" + day, {})
-
-    walk_stream
-        .on("file", function (root, fileStats, next) {
-
-            fs.readFile("data/201606" + day + "/" + fileStats.name, "utf8", parse_generators)
-            next()
-
-        })
-
-    walk_stream
-        .on("errors", function (root, nodeStatsArray, next) {
-
-            next()
-
-        })
-
-    walk_stream
-        .on("end", function () {
-
-            console.log("all done")
-
-        })
+var day = "01"
 
 
-    function parse_generators (err, data) {
+var walk_stream = walker.walk(`data/${year}${month}${day}`, {})
 
-        if (err) {
+walk_stream
+    .on("file", function (root, fileStats, next) {
 
-            return console.log(err)
+        console.log(`Transform ${fileStats.name}`)
 
-        }
+        fs.readFile(`data/${year}${month}${day}/${fileStats.name}`)
+            .then(parse_dispatch)
+            .then(write_dispatch)
+            .then(() => {
 
-        var lines = data.split("\n")
+                console.log("Finish writing data, scanning next file")
+                next()
 
-        lines.splice(0, 1)
+            })
+            .catch((err) => {
 
-        var new_data = lines.join("\n")
-
-        var options = {
-            columns: true,
-            relax_column_count: true
-        }
-
-        csv.parse(new_data, options, write_dispatch)
-
-    }
-
-    function write_dispatch (err, data) {
-
-        if (err) {
-
-            return console.log(err)
-
-        }
-
-        var data_model = {
-            wind: 0,
-            brown_coal: 0,
-            black_coal: 0,
-            gas: 0,
-            other: 0,
-            hydro: 0
-        }
-
-        var national_modal = {
-            TAS: Object.assign({}, data_model),
-            VIC: Object.assign({}, data_model),
-            NSW: Object.assign({}, data_model),
-            SA: Object.assign({}, data_model),
-            QLD: Object.assign({}, data_model)
-        }
-
-        var settlement_date
-
-        data.forEach(function (datum) {
-
-            if (!datum.DUID) {
-
-                return
-
-            }
-
-            var scada_value = +datum.SCADAVALUE
-
-            if (scada_value === 0) {
-
-                return
-
-            }
-
-            var duid = datum.DUID
-
-            settlement_date = datum.SETTLEMENTDATE
-
-            var generator = generator_map.get(duid)
-
-            if (!generator) {
-
-                return
-
-            }
-
-            var tech_type = generator.feul
-
-            var region = generator.region
-
-            region = region.substring(0, region.length - 1)
-
-            national_modal[region][tech_type] += Math.round(scada_value)
-
-            national_modal[region][tech_type] = national_modal[region][tech_type] < 0
-                ? 0
-                : national_modal[region][tech_type]
-
-        })
-        var isoTime = moment.tz(settlement_date, "YYYY/MM/DD HH:mm:ss", "Australia/Sydney").toISOString()
-
-        Object.keys(national_modal).forEach(function (state) {
-
-            var value = national_modal[state]
-
-            Object.keys(value).forEach(function (tech) {
-
-                var key = db.ref(`/${state}/dispatch/${tech}`).push().key
-
-                var ref = db.ref(`/${state}/dispatch/${tech}/${key}`)
-
-                console.log(national_modal[state][tech])
-                ref.set({
-                    x: isoTime,
-                    y: national_modal[state][tech]
-                })
+                console.log(err)
 
             })
 
-        })
+    })
 
+walk_stream
+    .on("errors", function (root, nodeStatsArray, next) {
+
+        console.log("File Error. Skip to next file")
+        next()
+
+    })
+
+walk_stream
+    .on("end", function () {
+
+        console.log("all done")
+
+    })
+
+
+function parse_dispatch (data) {
+
+    console.log("Parse dispatch data")
+
+    var lines = data.toString().split("\n")
+
+    lines.splice(0, 1)
+
+    var new_data = lines.join("\n")
+
+    var options = {
+        columns: true,
+        relax_column_count: true
     }
 
-})
+    return new Promise(function (resolve, reject) {
 
+        csv.parse(new_data, options, function (error, data) {
+
+            if (!error) {
+
+                resolve(data)
+
+            } else {
+
+                reject(error)
+
+            }
+
+        })
+
+    })
+
+}
+
+function write_dispatch (data) {
+
+    console.log("Write dispatch data")
+
+    let dispatch_points = []
+
+    var data_model = {
+        wind: 0,
+        brown_coal: 0,
+        black_coal: 0,
+        gas: 0,
+        other: 0,
+        hydro: 0
+    }
+
+    var national_modal = {
+        TAS: Object.assign({}, data_model),
+        VIC: Object.assign({}, data_model),
+        NSW: Object.assign({}, data_model),
+        SA: Object.assign({}, data_model),
+        QLD: Object.assign({}, data_model)
+    }
+
+    var date = moment.tz(data[0].SETTLEMENTDATE, "YYYY/MM/DD HH:mm:ss", "Australia/Sydney").valueOf()
+
+    data.forEach((datum) => {
+
+        if (!datum.DUID) {
+
+            return
+
+        }
+
+        var scada_value = +datum.SCADAVALUE
+
+        if (scada_value === 0) {
+
+            return
+
+        }
+
+        var generator = generator_map.get(datum.DUID)
+
+        if (!generator) {
+
+            return
+
+        }
+
+        var tech_type = generator.feul
+
+        var region = generator.region.substring(0, generator.region.length - 1)
+
+        national_modal[region][tech_type] += Math.round(scada_value) > 0 ? Math.round(scada_value) : 0
+
+    })
+
+    Object.keys(national_modal).forEach((region) => {
+
+        var regional_modal = national_modal[region]
+
+        Object.keys(regional_modal).forEach(function (tech) {
+
+            dispatch_points.push([
+                {
+                    value: national_modal[region][tech],
+                    time: date
+                },
+                {
+                    region: region,
+                    technology: tech
+                }
+            ])
+
+        })
+
+    })
+
+    return new Promise(function (resolve, reject) {
+
+        client.writePoints("dispatch", dispatch_points, {db: "volta"}, (error, response) => {
+
+            if (error) {
+
+                reject.log(error)
+
+            }
+
+            resolve()
+
+        })
+
+    })
+
+}
