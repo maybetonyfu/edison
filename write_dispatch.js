@@ -10,8 +10,6 @@ var influx = require("influx")
 
 var client = influx({
 
-  // cluster configuration
-
     host: "localhost",
     port: 8086,
     protocol: "http",
@@ -20,9 +18,6 @@ var client = influx({
     database: "volta"
 })
 
-
-
-// var write_data = new EventEmitter()
 
 var generator_map = new Map()
 
@@ -36,50 +31,59 @@ var month = "06"
 
 var year = "2016"
 
-// var lastDayOfMonth = new Date(year, month, 0).getDate()
+var lastDayOfMonth = new Date(year, month, 0).getDate()
 
-var day = "01"
+// var day = "01"
 
+function main (day) {
 
-var walk_stream = walker.walk(`data/${year}${month}${day}`, {})
+    var walk_stream = walker.walk(`data/${year}${month}${day}`, {})
 
-walk_stream
-    .on("file", function (root, fileStats, next) {
+    walk_stream
+        .on("file", function (root, fileStats, next) {
 
-        console.log(`Transform ${fileStats.name}`)
+            console.log(`Transform ${fileStats.name}`)
 
-        fs.readFile(`data/${year}${month}${day}/${fileStats.name}`)
-            .then(parse_dispatch)
-            .then(write_dispatch)
-            .then(() => {
+            fs.readFile(`data/${year}${month}${day}/${fileStats.name}`)
+                .then(parse_dispatch)
+                .then(write_dispatch)
+                .then(() => {
 
-                console.log("Finish writing data, scanning next file")
-                next()
+                    console.log("Finish writing data, scanning next file")
+                    next()
 
-            })
-            .catch((err) => {
+                })
+                .catch((err) => {
 
-                console.log(err)
+                    console.log(err)
 
-            })
+                })
 
-    })
+        })
 
-walk_stream
-    .on("errors", function (root, nodeStatsArray, next) {
+    walk_stream
+        .on("errors", function (root, nodeStatsArray, next) {
 
-        console.log("File Error. Skip to next file")
-        next()
+            console.log("File Error. Skip to next file")
+            next()
 
-    })
+        })
 
-walk_stream
-    .on("end", function () {
+    walk_stream
+        .on("end", function () {
 
-        console.log("all done")
+            if (Number(day) <= lastDayOfMonth) {
 
-    })
+                var newDay = (day + 1) < 10 ? ("0" + (Number(day) + 1)) : ("" + (Number(day) + 1))
 
+                console.log(newDay)
+                main(newDay)
+
+            }
+
+        })
+
+}
 
 function parse_dispatch (data) {
 
@@ -211,3 +215,5 @@ function write_dispatch (data) {
     })
 
 }
+
+main("01")
