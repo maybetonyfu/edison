@@ -1,16 +1,9 @@
 let csv = require("csv")
-let firebase = require("firebase")
 let fs = require("fs")
-
-
-firebase.initializeApp({
-    serviceAccount: "firebase-account.json",
-    databaseURL: "https://chameleon-9a6e4.firebaseio.com"
-})
 
 fs.readFile("AEMO_GENERATORS.csv", "utf8", parse_generators)
 
-let db = firebase.database()
+var generators = []
 
 function parse_generators (err, data) {
 
@@ -160,17 +153,16 @@ function transform_generators (err, data) {
 
             }
 
-            let generator_ref = db.ref("/generators")
-            let generator_key = generator_ref.push().key
-
-            generator_ref.child(generator_key).set({
+            generators.push({
                 duid: item.DUID,
                 region: item.Region,
                 feul: feul
             })
 
-            console.log(item.DUID)
-
         })
+
+    console.log(generators)
+
+    fs.writeFileSync("./generators.json", JSON.stringify(generators), "utf-8")
 
 }

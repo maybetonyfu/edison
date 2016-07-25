@@ -5,19 +5,18 @@
   "repository": "https://github.com/tonysickpony/edison.git",
   "main": "index.js",
   "scripts": {
-    "test": "eslint *.js && echo 'OK'"
+    "lint": "./node_modules/.bin/eslint . && echo 'OK'"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "csv": "^1.1.0",
-    "firebase": "3.1.0",
-    "graceful-fs": "^4.1.4",
     "influx": "^4.2.0",
     "mkdirp": "^0.5.1",
     "moment": "^2.13.0",
     "moment-timezone": "^0.5.4",
     "node-fetch": "^1.5.3",
+    "node-schedule": "^1.1.1",
     "promisify-node": "^0.4.0",
     "unzip": "^0.1.11",
     "walk": "^2.3.9"

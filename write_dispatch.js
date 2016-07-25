@@ -9,15 +9,23 @@ var influx = require("influx")
 // Configurable stuff
 
 var client = influx({
-
-    host: "localhost",
+    host: "45.63.27.151",
     port: 8086,
     protocol: "http",
-    username: "dbwriter",
-    password: "dbwriter",
-    database: "volta"
+    username: "dbwrite",
+    password: "dbwrite",
+    database: "aemo_data"
 })
 
+var startDay = 1
+
+var month = 0
+
+var year = 2016
+
+var firstDayToQuery = moment([year, month, startDay])
+
+var lastDayToQuery = moment([2016, 6, 19])
 
 var generator_map = new Map()
 
@@ -27,24 +35,22 @@ generators.forEach(function (item) {
 
 })
 
-var month = "06"
+main(firstDayToQuery)
 
-var year = "2016"
+function main (date) {
 
-var lastDayOfMonth = new Date(year, month, 0).getDate()
+    var dateString = date.format("YYYYMMDD")
 
-// var day = "01"
+    console.log(dateString)
 
-function main (day) {
-
-    var walk_stream = walker.walk(`data/${year}${month}${day}`, {})
+    var walk_stream = walker.walk(`data/${dateString}`, {})
 
     walk_stream
         .on("file", function (root, fileStats, next) {
 
             console.log(`Transform ${fileStats.name}`)
 
-            fs.readFile(`data/${year}${month}${day}/${fileStats.name}`)
+            fs.readFile(`data/${dateString}/${fileStats.name}`)
                 .then(parse_dispatch)
                 .then(write_dispatch)
                 .then(() => {
@@ -65,6 +71,7 @@ function main (day) {
         .on("errors", function (root, nodeStatsArray, next) {
 
             console.log("File Error. Skip to next file")
+
             next()
 
         })
@@ -72,12 +79,11 @@ function main (day) {
     walk_stream
         .on("end", function () {
 
-            if (Number(day) <= lastDayOfMonth) {
+            var newDate = date.add(1, "d")
 
-                var newDay = (day + 1) < 10 ? ("0" + (Number(day) + 1)) : ("" + (Number(day) + 1))
+            if (newDate.isSameOrBefore(lastDayToQuery)) {
 
-                console.log(newDay)
-                main(newDay)
+                return main(newDate)
 
             }
 
@@ -89,9 +95,11 @@ function parse_dispatch (data) {
 
     console.log("Parse dispatch data")
 
-    var lines = data.toString().split("\n")
+    var lines = data
+        .toString()
+        .split("\n")
 
-    lines.splice(0, 1)
+    lines.shift()
 
     var new_data = lines.join("\n")
 
@@ -104,15 +112,13 @@ function parse_dispatch (data) {
 
         csv.parse(new_data, options, function (error, data) {
 
-            if (!error) {
-
-                resolve(data)
-
-            } else {
+            if (error) {
 
                 reject(error)
 
             }
+
+            resolve(data)
 
         })
 
@@ -143,7 +149,7 @@ function write_dispatch (data) {
         QLD: Object.assign({}, data_model)
     }
 
-    var date = moment.tz(data[0].SETTLEMENTDATE, "YYYY/MM/DD HH:mm:ss", "Australia/Sydney").valueOf()
+    var unixTime = moment.tz(data[0].SETTLEMENTDATE, "YYYY/MM/DD HH:mm:ss", "Australia/Sydney").valueOf()
 
     data.forEach((datum) => {
 
@@ -171,7 +177,7 @@ function write_dispatch (data) {
 
         var tech_type = generator.feul
 
-        var region = generator.region.substring(0, generator.region.length - 1)
+        var region = generator.region
 
         national_modal[region][tech_type] += Math.round(scada_value) > 0 ? Math.round(scada_value) : 0
 
@@ -186,7 +192,7 @@ function write_dispatch (data) {
             dispatch_points.push([
                 {
                     value: national_modal[region][tech],
-                    time: date
+                    time: unixTime
                 },
                 {
                     region: region,
@@ -200,11 +206,11 @@ function write_dispatch (data) {
 
     return new Promise(function (resolve, reject) {
 
-        client.writePoints("dispatch", dispatch_points, {db: "volta"}, (error, response) => {
+        client.writePoints("dispatch", dispatch_points, {db: "aemo_data"}, (error, response) => {
 
             if (error) {
 
-                reject.log(error)
+                reject(error)
 
             }
 
@@ -215,5 +221,3 @@ function write_dispatch (data) {
     })
 
 }
-
-main("01")
