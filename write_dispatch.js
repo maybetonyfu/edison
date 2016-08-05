@@ -17,15 +17,15 @@ var client = influx({
     database: "aemo_data"
 })
 
-var startDay = 1
+// var day = 1
 
-var month = 0
+// var month = 0
 
-var year = 2016
+// var year = 2016
 
-var firstDayToQuery = moment([year, month, startDay])
+var query_from_this_date = moment([2016, 0, 1])
 
-var lastDayToQuery = moment([2016, 6, 19])
+var query_until_this_date = moment([2016, 6, 19])
 
 var generator_map = new Map()
 
@@ -35,22 +35,22 @@ generators.forEach(function (item) {
 
 })
 
-main(firstDayToQuery)
+main(query_from_this_date)
 
 function main (date) {
 
-    var dateString = date.format("YYYYMMDD")
+    var date_string = date.format("YYYYMMDD")
 
-    console.log(dateString)
+    console.log(date_string)
 
-    var walk_stream = walker.walk(`data/${dateString}`, {})
+    var walk_stream = walker.walk(`data/${date_string}`, {})
 
     walk_stream
-        .on("file", function (root, fileStats, next) {
+        .on("file", function (root, file_stats, next) {
 
-            console.log(`Transform ${fileStats.name}`)
+            console.log(`Transform ${file_stats.name}`)
 
-            fs.readFile(`data/${dateString}/${fileStats.name}`)
+            fs.readFile(`data/${date_string}/${file_stats.name}`)
                 .then(parse_dispatch)
                 .then(write_dispatch)
                 .then(() => {
@@ -79,11 +79,11 @@ function main (date) {
     walk_stream
         .on("end", function () {
 
-            var newDate = date.add(1, "d")
+            var next_day = date.add(1, "d")
 
-            if (newDate.isSameOrBefore(lastDayToQuery)) {
+            if (next_day.isSameOrBefore(query_until_this_date)) {
 
-                return main(newDate)
+                return main(next_day)
 
             }
 
