@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "csv": "^1.1.0",
+    "glob": "^7.0.5",
     "influx": "^4.2.0",
     "mkdirp": "^0.5.1",
     "moment": "^2.13.0",

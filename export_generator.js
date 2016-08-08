@@ -156,7 +156,8 @@ function transform_generators (err, data) {
             generators.push({
                 duid: item.DUID,
                 region: item.Region,
-                feul: feul
+                feul: feul,
+                co2_emissions_factor: 0
             })
 
         })

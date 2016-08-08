@@ -10,21 +10,16 @@ var nem = "http://www.nemweb.com.au"
 
 var dispatch_path = "/Reports/ARCHIVE/Dispatch_SCADA/"
 
-var startDay = 1
-
-var month = 1
-
-var year = 2016
-
 var local_raw_path = "raw/"
 
 var local_output_path = "data/"
 
-var firstDayToQuery = moment([year, month, startDay])
+var fetch_from_this_date = moment([2016, 6, 18])
 
-var lastDayToQuery = moment([2016, 6, 20])
+var fetch_until_this_date = moment([2016, 7, 7])
 
-main(firstDayToQuery)
+
+main(fetch_from_this_date)
 
 function main (date) {
 
@@ -81,7 +76,7 @@ function main (date) {
 
             var newDate = date.add(1, "d")
 
-            if (newDate.isSameOrBefore(lastDayToQuery)) {
+            if (newDate.isSameOrBefore(fetch_until_this_date)) {
 
                 return main(newDate)
 

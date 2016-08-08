@@ -9,16 +9,16 @@ var client = influx({
     host: "45.63.27.151",
     port: 8086,
     protocol: "http",
-    username: "dbwrite",
-    password: "dbwrite",
-    database: "volta"
+    username: "datawrite",
+    password: "datawrite",
+    database: "aemo_data"
 })
 
 let nem = "http://www.nemweb.com.au"
 
 let demand_path = "/mms.GRAPHS/data/"
 
-let month = "06"
+let month = "07"
 
 let year = "2016"
 
@@ -29,6 +29,7 @@ let price_points = []
 let demand_points = []
 
 // Main procedure
+
 states.forEach((state) => {
 
     fetch(`${nem}${demand_path}DATA${year}${month}_${state}1.csv`)
@@ -82,11 +83,11 @@ states.forEach((state) => {
         })
 
         var series = {
-            price_points: price_points,
+            price: price_points,
             demand: demand_points
         }
 
-        client.writeSeries(series, {db: "volta"}, function (err, response) {
+        client.writeSeries(series, {db: "aemo_data"}, function (err, response) {
 
             if (err) {
 

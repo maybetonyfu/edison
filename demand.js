@@ -1,7 +1,9 @@
 let csv = require("csv")
-var fetch = require("node-fetch")
+// var fetch = require("node-fetch")
 let moment = require("moment-timezone")
 var influx = require("influx")
+var http = require("http")
+var fs = require("fs")
 
 // Configurable stuff
 
@@ -18,17 +20,53 @@ let nem = "http://www.nemweb.com.au"
 
 let demand_path = "/mms.GRAPHS/data/"
 
+let demand_local_path = "/mms.GRAPHS/data/"
+
 let month = "06"
 
 let year = "2016"
 
 let states = ["NSW", "QLD", "SA", "TAS", "VIC"]
 
+var fetch_from_this_date = moment([2016, 0, 1])
+
+var fetch_until_this_date = moment([2016, 6, 19])
+
 let price_points = []
 
 let demand_points = []
 
 // Main procedure
+
+module.exports = {
+
+    get_demand: get_demand
+
+}
+
+function get_demand () {
+
+    var file = fs.createWriteStream(`${demand_local_path}${demand_file}`)
+
+    states.forEach((state) => {
+
+        http.get(`${nem}${demand_path}DATA${year}${month}_${state}1.csv`, (response) => {
+
+            response.pipe(file)
+
+            response.on("end", () => {
+
+                console.log("Download file finished")
+
+
+            })
+
+        })
+
+    })
+
+}
+
 states.forEach((state) => {
 
     fetch(`${nem}${demand_path}DATA${year}${month}_${state}1.csv`)
