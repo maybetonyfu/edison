@@ -130,7 +130,7 @@ function import_demand (config) {
 
                     console.log("Move on to next date")
 
-                    var next_month = from_date.add(1, "m")
+                    var next_month = from_date.add(1, "months")
 
                     if (next_month.isSameOrBefore(to_date)) {
 
@@ -196,8 +196,6 @@ function write_demand (data) {
 
     console.log("Write dispatch data")
 
-    console.log(data)
-
     data.forEach((datum) => {
 
         let unixTime = moment.tz(datum.SETTLEMENTDATE, "YYYY/MM/DD HH:mm:ss", "Australia/Sydney").valueOf()
@@ -233,7 +231,6 @@ function write_demand (data) {
         demand: demand_points
     }
 
-    console.log(series)
 
     return new Promise(function (resolve, reject) {
 
@@ -241,11 +238,11 @@ function write_demand (data) {
 
             if (err) {
 
-                console.log(err)
+                reject()
 
             }
 
-            console.log(response)
+            resolve()
 
         })
 
