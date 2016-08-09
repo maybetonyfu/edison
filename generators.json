@@ -1,2053 +1,2053 @@
 [
    {
       "duid":"BLNKTAS",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"other",
       "co2_emissions_factor":0
    },
    {
       "duid":"BLNKVIC",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"other",
       "co2_emissions_factor":0
    },
    {
       "duid":"SHPUMP2",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0
    },
    {
       "duid":"AGLHAL",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":1.01158586
    },
    {
       "duid":"AGLHAL1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"AGLHAL2",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"AGLHAL3",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"AGLSOM",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.79433504
    },
    {
       "duid":"AMCORGR",
-      "region":"SA1",
+      "region":"SA",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"ANGAS1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"other",
       "co2_emissions_factor":1.01353846
    },
    {
       "duid":"ANGAS2",
-      "region":"SA1",
+      "region":"SA",
       "feul":"other",
       "co2_emissions_factor":1.01353846
    },
    {
       "duid":"APS",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.2286251
    },
    {
       "duid":"BARCALDN",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.77547071
    },
    {
       "duid":"BBASEHOS",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.956
    },
    {
       "duid":"BBTHREE1",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"gas",
       "co2_emissions_factor":0.63682759
    },
    {
       "duid":"BBTHREE2",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"gas",
       "co2_emissions_factor":0.63682759
    },
    {
       "duid":"BBTHREE3",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"gas",
       "co2_emissions_factor":0.63682759
    },
    {
       "duid":"BDL01",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.57096611
    },
    {
       "duid":"BDL02",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.57096611
    },
    {
       "duid":"BLULAKE1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"BRAEMAR1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.66747516
    },
    {
       "duid":"BRAEMAR2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.66747516
    },
    {
       "duid":"BRAEMAR3",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.66747516
    },
    {
       "duid":"BRAEMAR5",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.68899145
    },
    {
       "duid":"BRAEMAR6",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.68899145
    },
    {
       "duid":"BRAEMAR7",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.68899145
    },
    {
       "duid":"BW01",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.01297637
    },
    {
       "duid":"BW02",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.01297637
    },
    {
       "duid":"BW03",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.01297637
    },
    {
       "duid":"BW04",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.01297637
    },
    {
       "duid":"CALL_A_4",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":1.328
    },
    {
       "duid":"CALL_B_1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":1.01870679
    },
    {
       "duid":"CALL_B_2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":1.01870679
    },
    {
       "duid":"CG1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.8148951
    },
    {
       "duid":"CG2",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.8148951
    },
    {
       "duid":"CG3",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.8148951
    },
    {
       "duid":"CG4",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.8148951
    },
    {
       "duid":"COLNSV_1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0
    },
    {
       "duid":"COLNSV_2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0
    },
    {
       "duid":"COLNSV_3",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0
    },
    {
       "duid":"COLNSV_4",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0
    },
    {
       "duid":"COLNSV_5",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0
    },
    {
       "duid":"CPP_3",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.93668309
    },
    {
       "duid":"CPP_4",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.93668309
    },
    {
       "duid":"CPSA",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.52537754
    },
    {
       "duid":"CPSA0",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"DAANDINE",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.589
    },
    {
       "duid":"DDPS0",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"DDPS1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.50648822
    },
    {
       "duid":"DRYCGT1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.94931158
    },
    {
       "duid":"DRYCGT2",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.94931158
    },
    {
       "duid":"DRYCGT3",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.94931158
    },
    {
       "duid":"ER01",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.01093715
    },
    {
       "duid":"ER02",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.01093715
    },
    {
       "duid":"ER03",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.01093715
    },
    {
       "duid":"ER04",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.01093715
    },
    {
       "duid":"ERGT01",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"GB01",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"GERMCRK",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.57219429
    },
    {
       "duid":"GSTONE1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":1.05222541
    },
    {
       "duid":"GSTONE2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":1.05222541
    },
    {
       "duid":"GSTONE3",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":1.05222541
    },
    {
       "duid":"GSTONE4",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":1.05222541
    },
    {
       "duid":"GSTONE5",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":1.05222541
    },
    {
       "duid":"GSTONE6",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":1.05222541
    },
    {
       "duid":"HEZ",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0.77142857
    },
    {
       "duid":"HVGTS",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0.96428571
    },
    {
       "duid":"HWPS1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.55800075
    },
    {
       "duid":"HWPS2",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.55800075
    },
    {
       "duid":"HWPS3",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.55800075
    },
    {
       "duid":"HWPS4",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.55800075
    },
    {
       "duid":"HWPS5",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.55800075
    },
    {
       "duid":"HWPS6",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.55800075
    },
    {
       "duid":"HWPS7",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.55800075
    },
    {
       "duid":"HWPS8",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.55800075
    },
    {
       "duid":"JLA01",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.90667087
    },
    {
       "duid":"JLA02",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.90667087
    },
    {
       "duid":"JLA03",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.90667087
    },
    {
       "duid":"JLA04",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.90667087
    },
    {
       "duid":"JLB01",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.90667087
    },
    {
       "duid":"JLB02",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.90667087
    },
    {
       "duid":"JLB03",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.90667087
    },
    {
       "duid":"KPP_1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.94516133
    },
    {
       "duid":"KRCCOGEN",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"LADBROK1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.67919897
    },
    {
       "duid":"LADBROK2",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.67919897
    },
    {
       "duid":"LAVNORTH",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.81463783
    },
    {
       "duid":"LD01",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.06621095
    },
    {
       "duid":"LD02",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.06621095
    },
    {
       "duid":"LD03",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.06621095
    },
    {
       "duid":"LD04",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.06621095
    },
    {
       "duid":"LONGFORD",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.6624
    },
    {
       "duid":"LONSDALE",
-      "region":"SA1",
+      "region":"SA",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"LOYYB1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.24030123
    },
    {
       "duid":"LOYYB2",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.24030123
    },
    {
       "duid":"LYA1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.27979388
    },
    {
       "duid":"LYA2",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.27979388
    },
    {
       "duid":"LYA3",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.27979388
    },
    {
       "duid":"LYA4",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.27979388
    },
    {
       "duid":"MACKAYGT",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"other",
       "co2_emissions_factor":0.99385714
    },
    {
       "duid":"MBAHNTH",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.65036571
    },
    {
       "duid":"MINTARO",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.9974414
    },
    {
       "duid":"MM3",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":0
    },
    {
       "duid":"MM4",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":0
    },
    {
       "duid":"MOR0",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":0
    },
    {
       "duid":"MOR1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.64871738
    },
    {
       "duid":"MOR2",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.64871738
    },
    {
       "duid":"MOR3",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.64871738
    },
    {
       "duid":"MORANBAH",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.64254546
    },
    {
       "duid":"MORTLK11",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.56284485
    },
    {
       "duid":"MORTLK12",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.56284485
    },
    {
       "duid":"MP1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":0.99715518
    },
    {
       "duid":"MP2",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":0.99715518
    },
    {
       "duid":"MPP_1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.89104569
    },
    {
       "duid":"MPP_2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.89104569
    },
    {
       "duid":"MSTUART1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"other",
       "co2_emissions_factor":1.02912705
    },
    {
       "duid":"MSTUART2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"other",
       "co2_emissions_factor":1.02912705
    },
    {
       "duid":"MSTUART3",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"other",
       "co2_emissions_factor":1.02912705
    },
    {
       "duid":"NPS",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.59190226
    },
    {
       "duid":"NPS1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"brown_coal",
       "co2_emissions_factor":1.13063506
    },
    {
       "duid":"NPS2",
-      "region":"SA1",
+      "region":"SA",
       "feul":"brown_coal",
       "co2_emissions_factor":1.13063506
    },
    {
       "duid":"OAKEY1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.99074482
    },
    {
       "duid":"OAKEY2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.99074482
    },
    {
       "duid":"OAKYCREK1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"OAKYCREK2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"OSB-AG",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.61664525
    },
    {
       "duid":"OSB-AG1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"PLAYB-AG",
-      "region":"SA1",
+      "region":"SA",
       "feul":"brown_coal",
       "co2_emissions_factor":1.5090411
    },
    {
       "duid":"POR01",
-      "region":"SA1",
+      "region":"SA",
       "feul":"other",
       "co2_emissions_factor":1.01353846
    },
    {
       "duid":"POR03",
-      "region":"SA1",
+      "region":"SA",
       "feul":"other",
       "co2_emissions_factor":1.01353846
    },
    {
       "duid":"PPCCGT",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.48184576
    },
    {
       "duid":"PPCCGT1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"QPS1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.83979445
    },
    {
       "duid":"QPS2",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.83979445
    },
    {
       "duid":"QPS3",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.83979445
    },
    {
       "duid":"QPS4",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.83979445
    },
    {
       "duid":"QPS5",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.83979445
    },
    {
       "duid":"REDBANK1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":1.40353197
    },
    {
       "duid":"ROMA_7",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.76171715
    },
    {
       "duid":"ROMA_8",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.76171715
    },
    {
       "duid":"SITHE01",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.62478168
    },
    {
       "duid":"SITHE02",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"SNUG1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"other",
       "co2_emissions_factor":1.01353846
    },
    {
       "duid":"STAN-1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.96880333
    },
    {
       "duid":"STAN-2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.96880333
    },
    {
       "duid":"STAN-3",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.96880333
    },
    {
       "duid":"STAN-4",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.96880333
    },
    {
       "duid":"STANV1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"STANV2",
-      "region":"SA1",
+      "region":"SA",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"STHBKTEC",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"SWAN_B_1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0
    },
    {
       "duid":"SWAN_B_3",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0
    },
    {
       "duid":"SWAN_E",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.45563974
    },
    {
       "duid":"SYMEX1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"TALWA1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.46644387
    },
    {
       "duid":"TARONG#1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.95765554
    },
    {
       "duid":"TARONG#2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.95765554
    },
    {
       "duid":"TARONG#3",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.95765554
    },
    {
       "duid":"TARONG#4",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.95765554
    },
    {
       "duid":"TERALBA",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.70690909
    },
    {
       "duid":"TNPS1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"black_coal",
       "co2_emissions_factor":0.90729266
    },
    {
       "duid":"TORRA1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.78567506
    },
    {
       "duid":"TORRA2",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.78567506
    },
    {
       "duid":"TORRA3",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.78567506
    },
    {
       "duid":"TORRA4",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.78567506
    },
    {
       "duid":"TORRB1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.71187368
    },
    {
       "duid":"TORRB2",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.71187368
    },
    {
       "duid":"TORRB3",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.71187368
    },
    {
       "duid":"TORRB4",
-      "region":"SA1",
+      "region":"SA",
       "feul":"gas",
       "co2_emissions_factor":0.71187368
    },
    {
       "duid":"TVCC201",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"gas",
       "co2_emissions_factor":0.42307204
    },
    {
       "duid":"TVCC202",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"TVPP104",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"gas",
       "co2_emissions_factor":0.63682759
    },
    {
       "duid":"URANQ11",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.73945008
    },
    {
       "duid":"URANQ12",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.73945008
    },
    {
       "duid":"URANQ13",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.73945008
    },
    {
       "duid":"URANQ14",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.73945008
    },
    {
       "duid":"VP5",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.0182775
    },
    {
       "duid":"VP6",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.0182775
    },
    {
       "duid":"VPGS",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.88032961
    },
    {
       "duid":"WW7",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":0
    },
    {
       "duid":"WW8",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"black_coal",
       "co2_emissions_factor":1.03004577
    },
    {
       "duid":"YABULU",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.49844024
    },
    {
       "duid":"YABULU2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.49844024
    },
    {
       "duid":"YARWUN_1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.62364706
    },
    {
       "duid":"YWPS1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.4913958
    },
    {
       "duid":"YWPS2",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.4913958
    },
    {
       "duid":"YWPS3",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.4913958
    },
    {
       "duid":"YWPS4",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"brown_coal",
       "co2_emissions_factor":1.4913958
    },
    {
       "duid":"BANKSPT1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"BANKSPT2",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0
    },
    {
       "duid":"NINEWIL1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"STGEORG1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"TATIARA1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"WESTCBT1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"WESTILL1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0.9
    },
    {
       "duid":"WESTILL2",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0
    },
    {
       "duid":"BAPS",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"BAPS0",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"BARRON-1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"BARRON-2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"BASTYAN",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"BLOWERNG",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"BROWNMT1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"BROWNMT2",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"BROWNMT3",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"BROWNMT4",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"BURRIN1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"BURRIN2",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"BUTLERSG",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"CETHANA",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"CLOVER",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"CLUNY",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"DARTM1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"DEVILS_G",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"EILDON0",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"EILDON1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"EILDON2",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"EILDON3",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"FISHER",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"GORDON",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"GUTHEGA",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"GUTHEGA1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"HLMSEW01",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"HUMENSW",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"HUMEV",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"JBUTTERS",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"JNDABNE1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"JOUNAMA1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"KAREEYA1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"KAREEYA2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"KAREEYA3",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"KAREEYA4",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"KAREEYA5",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"KEEPIT",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"LEM_WIL",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"LEM_WIL0",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"LI_WY_CA",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"LI_WY_CA2",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"LI_WY_CA3",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"LK_ECHO",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"MACKNTSH",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"MCKAY0",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"MCKAY1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"MEADOWBK",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"MURRAY",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"MURRAY2",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"PALOONA",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"PINDARI",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"POAT110",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"POAT220",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"PUMP1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"PUMP2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"REECE1",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"REECE2",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"REPULSE",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"ROWALLAN",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"SHGEN",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"SHGEN2",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"SHPUMP",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"SNOWSTH1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"SNOWNTH1",
-      "region":"SA2",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"SNOWYP",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"TARRALEA",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"TERMSTOR",
-      "region":"SA1",
+      "region":"SA",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"TREVALLN",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"TRIBUTE",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"TUMUT3",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"TUNGATIN",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"UPPTUMUT",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"UPPTUMUT1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"W/HOE#1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"W/HOE#2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"WG01",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"WIVENSH",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"WKIEWA1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"WKIEWA2",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"WYANGALA",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"WYANGALB",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"hydro",
       "co2_emissions_factor":0
    },
    {
       "duid":"AGLNOW1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.0576
    },
    {
       "duid":"AWABAREF",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.0576
    },
    {
       "duid":"BPLANDF1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.0576
    },
    {
       "duid":"BROOKLYN1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"BROOKLYN2",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"BWTR1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0.018
    },
    {
       "duid":"CONDONG1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0.018
    },
    {
       "duid":"EASTCRK",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.0576
    },
    {
       "duid":"EDLRGNRD",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"other",
       "co2_emissions_factor":0.018
    },
    {
       "duid":"GRANGEAV",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.0576
    },
    {
       "duid":"ICSM",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"other",
       "co2_emissions_factor":0.018
    },
    {
       "duid":"INVICTA",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"other",
       "co2_emissions_factor":0.018
    },
    {
       "duid":"JACKSGUL1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"JACKSGUL2",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"LUCAS2S2",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.0576
    },
    {
       "duid":"MORNW",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.0576
    },
    {
       "duid":"PIONEER",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"other",
       "co2_emissions_factor":0.018
    },
    {
       "duid":"PMATTAEP",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"other",
       "co2_emissions_factor":0
    },
    {
       "duid":"REMOUNT",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"gas",
       "co2_emissions_factor":0.0576
    },
    {
       "duid":"ROCHEDAL1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"ROCHEDAL2",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0
    },
    {
       "duid":"RPCG",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"other",
       "co2_emissions_factor":0.0216
    },
    {
       "duid":"SHEP1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"other",
       "co2_emissions_factor":0.0576
    },
    {
       "duid":"SUNCOAST",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"other",
       "co2_emissions_factor":0.0216
    },
    {
       "duid":"TATURA01",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"other",
       "co2_emissions_factor":0.0576
    },
    {
       "duid":"TITREE",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.0576
    },
    {
       "duid":"WDLNGN01",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"gas",
       "co2_emissions_factor":0.0576
    },
    {
       "duid":"WHIT1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"gas",
       "co2_emissions_factor":0.0576
    },
    {
       "duid":"WYNDW",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"gas",
       "co2_emissions_factor":0.04937143
    },
    {
       "duid":"BLUFF1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"CAPTL_WF",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"CATHROCK",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"CHALLHWF",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"CLEMGPWF",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"CNUNDAWF",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"CULLRGWF",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"GUNNING1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"HALLWF1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"HALLWF2",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"HEPWIND1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"LKBONNY1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"LKBONNY2",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"LKBONNY3",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"MACARTH1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"MLWF1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"MTMILLAR",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"MUSSELR1",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"NBHWF1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"OAKLAND1",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"PORTWF",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"SNOWTWN1",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"STARHLWF",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"TOORAWF",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"WATERLWF",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"WAUBRAWF",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"WHILL1",
-      "region":"QLD1",
+      "region":"QLD",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"WONWP",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"WOODLWN1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"WOOLNTH1",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"WOOLNTH2",
-      "region":"TAS1",
+      "region":"TAS",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"WPWF",
-      "region":"SA1",
+      "region":"SA",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"YAMBUKWF",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"MERCER01",
-      "region":"VIC1",
+      "region":"VIC",
       "feul":"wind",
       "co2_emissions_factor":0
    },
    {
       "duid":"GULLRWF1",
-      "region":"NSW1",
+      "region":"NSW",
       "feul":"wind",
       "co2_emissions_factor":0
    }

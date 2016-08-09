@@ -39,36 +39,47 @@ function main (date) {
 
     glob(`data/${date_string}/*.CSV`, {}, (er, files) => {
 
-        files.forEach((file, index) => {
-
-            fs.readFile(file)
-            .then(parse_dispatch)
-            .then(write_dispatch)
-            .then(() => {
-
-                console.log(`Finish writing data from ${file}`)
-
-                console.log("scanning next file...")
-
-            })
-            .catch((err) => {
-
-                console.log(err)
-
-            })
-
-        })
-
-
-        var next_day = date.add(1, "d")
-
-        if (next_day.isSameOrBefore(write_until_this_date)) {
-
-            return main(next_day)
-
-        }
+        process_file(files, 0, date)
 
     })
+
+}
+
+function process_file (files, index, date) {
+
+    fs.readFile(files[index])
+        .then(parse_dispatch)
+        .then(write_dispatch)
+        .then(() => {
+
+            console.log(`Finish writing data from ${files[index]}`)
+
+            if (index === files.length - 1) {
+
+                console.log("Move on to next date")
+
+                var next_day = date.add(1, "d")
+
+                if (next_day.isSameOrBefore(write_until_this_date)) {
+
+                    return main(next_day)
+
+                }
+
+                return
+
+            }
+
+            console.log("scanning next file...")
+
+            return process_file(files, index + 1, date)
+
+        })
+        .catch((err) => {
+
+            console.log(err)
+
+        })
 
 }
 
@@ -151,6 +162,10 @@ function write_dispatch (data) {
 
         var region = generator.region
 
+        var emission_value = scada_value * generator["co2_emissions_factor"]
+
+        // console.log(emission_value)
+
         dispatch_points.push([
             {
                 value: scada_value,
@@ -165,7 +180,7 @@ function write_dispatch (data) {
 
         emission_points.push([
             {
-                value: scada_value * generator["co2_emissions_factor"],
+                value: emission_value,
                 time: unixTime
             },
             {
@@ -178,7 +193,7 @@ function write_dispatch (data) {
     })
 
     var series = {
-        dispatch: emission_points,
+        dispatch: dispatch_points,
         emission: emission_points
     }
 
