@@ -14,9 +14,9 @@ var local_raw_path = "raw/"
 
 var local_output_path = "data/"
 
-var fetch_from_this_date = moment([2016, 6, 18])
+var fetch_from_this_date = moment([2016, 7, 7])
 
-var fetch_until_this_date = moment([2016, 7, 7])
+var fetch_until_this_date = moment([2016, 7, 10])
 
 
 main(fetch_from_this_date)

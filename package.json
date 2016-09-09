@@ -20,7 +20,8 @@
     "node-schedule": "^1.1.1",
     "promisify-node": "^0.4.0",
     "unzip": "^0.1.11",
-    "walk": "^2.3.9"
+    "walk": "^2.3.9",
+    "x-ray": "^2.3.0"
   },
   "devDependencies": {}
 }

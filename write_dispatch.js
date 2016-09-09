@@ -17,9 +17,9 @@ var client = influx({
     database: "aemo_data"
 })
 
-var write_from_this_date = moment([2016, 0, 1])
+var write_from_this_date = moment([2016, 7, 7])
 
-var write_until_this_date = moment([2016, 7, 7])
+var write_until_this_date = moment([2016, 7, 13])
 
 var generator_map = new Map()
 
